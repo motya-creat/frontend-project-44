@@ -9,3 +9,4 @@ export default function welcome(description) {
     }
     return name
 }
+export const isEven = (num) => num % 2 === 0 ? 'yes' : 'no';
