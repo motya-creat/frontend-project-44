@@ -1,6 +1,11 @@
 import readlineSync from 'readline-sync';
 
-export default function cli () {
+export default function welcome(description) {
+    console.log('Welcome to the Brain Games!')
     const name = readlineSync.question('May I have your name? ')
-    return console.log('Hello, ' + name + '!')
+    console.log('Hello, ' + name + '!')
+    if (description != undefined){
+        console.log(description)
+    }
+    return name
 }
