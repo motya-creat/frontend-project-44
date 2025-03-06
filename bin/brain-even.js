@@ -14,8 +14,7 @@ export default function game(name) {
             console.log('Correct')
             i++
         } else {
-            console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.`)
-            console.log(`Let's try again, ${name}`)
+            console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.\nLet's try again, ${name}`)
             return
         }
     }

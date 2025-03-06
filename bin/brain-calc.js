@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 // import welcome from '../src/cli';
-// calcGame(welcome())
 
 function getRandomNumber(min, max){
     return Math.floor(Math.random() * (max - min) + min);
@@ -12,7 +11,7 @@ const getAnswerQestion = {
     "*": function(x, y) {return x * y}
 }
 
-export const calculateGame = (name) =>{
+export const calcGame = (name) =>{
     let i = 0
     const signs = ['+','-','*']
     while (i < 3){
@@ -26,9 +25,10 @@ export const calculateGame = (name) =>{
             i++
             console.log('Correct!')
         }else{
+            console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answerOfQuestion}'.\nLet's try again, Sam! `)
             return
         }
-        
     }
+    console.log(`Congratulations, ${name}!`)
 }
-calculateGame()
+calcGame()
