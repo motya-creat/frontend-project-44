@@ -2,7 +2,7 @@
 import readlineSync from 'readline-sync';
 import welcome, { getRandomNumber, getAnswerQestion } from '../src/cli.js';
 
-export default function calcGame() {
+export default function calcGame(name) {
   welcome();
   let i = 0;
   const signs = ['+', '-', '*'];
@@ -13,14 +13,14 @@ export default function calcGame() {
     const answerOfQuestion = getAnswerQestion[sign](firstNumber, secondNumber);
     console.log(`Quetion: ${firstNumber} ${sign} ${secondNumber}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer === answerOfQuestion) {
+    if (`${userAnswer}` === `${answerOfQuestion}`) {
       i += 1;
       console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answerOfQuestion}'.\nLet's try again, Sam!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answerOfQuestion}'.\nLet's try again, ${name}!`);
       return;
     }
   }
-  console.log('Congratulations, Sam!');
+  console.log(`Congratulations, ${name}!`);
 }
-calcGame();
+calcGame(welcome('What is the result of the expression?'));

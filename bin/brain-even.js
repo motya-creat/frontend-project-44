@@ -14,11 +14,11 @@ export default function game(name) {
       console.log('Correct');
       i += 1;
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.\nLet's try again, ${name}`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.\nLet's try again, ${name}!`);
       return;
     }
   }
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 }
 
 game(welcome('Answer "yes" if the number is even, otherwise answer "no".'));
