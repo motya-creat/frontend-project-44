@@ -10,6 +10,12 @@ export default function welcome(description) {
   return name;
 }
 export const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
+export const isPrime = (num) => {
+  for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
+    if (num % i === 0) return false;
+  }
+  return num > 1;
+}
 
 export const getRandomNumber = (min = 1, max = 100) => {
   const range = max - min + 1
