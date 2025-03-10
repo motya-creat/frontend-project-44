@@ -11,7 +11,7 @@ export default function calcGame(name) {
     const secondNumber = getRandomNumber(25, 55);
     const sign = signs[getRandomNumber(0, 2)];
     const answerOfQuestion = getAnswerQestion[sign](firstNumber, secondNumber);
-    console.log(`Quetion: ${firstNumber} ${sign} ${secondNumber}`);
+    console.log(`Question: ${firstNumber} ${sign} ${secondNumber}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (`${userAnswer}` === `${answerOfQuestion}`) {
       i += 1;
