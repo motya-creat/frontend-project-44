@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/motya-creat/frontend-project-44#readme",
   "dependencies": {
+    "link": "^2.1.1",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {

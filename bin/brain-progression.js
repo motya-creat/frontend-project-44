@@ -14,7 +14,7 @@ export default function progressionGame(name) {
 
         const userAnswer = readlineSync.question(`Your answer: `)
 
-        if (userAnswer.toString() === correctNumber.toString()) {
+        if (`${userAnswer}` === `${correctNumber}`) {
             attemps += 1;
             console.log('Correct!');
         } else {
