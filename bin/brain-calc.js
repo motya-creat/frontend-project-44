@@ -3,7 +3,6 @@ import readlineSync from 'readline-sync';
 import welcome, { getRandomNumber, getAnswerQestion } from '../src/cli.js';
 
 export default function calcGame(name) {
-  welcome();
   let i = 0;
   const signs = ['+', '-', '*'];
   while (i < 3) {
