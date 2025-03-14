@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import welcome, { getRandomNumber, progression } from '../src/cli.js';
+import welcome, { progression } from '../src/cli.js';
 
 export default function progressionGame(name) {
 
@@ -9,9 +9,7 @@ export default function progressionGame(name) {
     while (attemp < 3) {
 
         const { arr, correctNumber } = progression()
-
         console.log(`Question: ${arr.join(' ')}`);
-        
         const userAnswer = readlineSync.question(`Your answer: `)
 
         if (`${userAnswer}` === `${correctNumber}`) {

@@ -11,7 +11,7 @@ export default function welcome(description) {
 }
 export const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
 export const isPrime = (num) => {
-  for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
+  for (let i = 2, s = Math.sqrt(num); i <= s; i+=1) {
     if (num % i === 0) return false;
   }
   return num > 1;
@@ -35,8 +35,7 @@ export function progression() {
   const length = getRandomNumber(5, 10)
   const step = getRandomNumber(1, 20)
 
-
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < length; i+=1) {
     arr.push(start + step * i)
   }
 
@@ -45,7 +44,6 @@ export function progression() {
   arr[randIndex] = '..'
 
   return { arr, correctNumber }
-
 }
 
 
