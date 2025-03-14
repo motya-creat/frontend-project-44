@@ -18,7 +18,8 @@ export default function progressionGame(name) {
             attemp += 1;
             console.log('Correct!');
         } else {
-            console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctNumber}'.\nLet's try again, ${name}!`);
+            console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctNumber}'.`);
+            console.log(`Let's try again, ${name}!`)
             return;
         }
         console.log(`Congratulations, ${name}!`);
