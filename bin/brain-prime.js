@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import welcome, { isPrime } from '../src/cli.js';
 
