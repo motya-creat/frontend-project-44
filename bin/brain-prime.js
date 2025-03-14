@@ -8,8 +8,8 @@ export default function game(name) {
     const randNumber = Math.floor(Math.random(10 - 1) * 10);
     console.log(`Question: ${randNumber}`);
     const answer = readlineSync.question('Your answer: ');
-    const correct = isPrime(randNumber) ? 'yes': 'no';
-    
+    const correct = isPrime(randNumber) ? 'yes' : 'no';
+
     if (correct === answer) {
       console.log('Correct');
       i += 1;
@@ -18,7 +18,7 @@ export default function game(name) {
       return;
     }
   }
-  console.log(`Congratulations, ${name}!`)
+  console.log(`Congratulations, ${name}!`);
 }
 
-game(welcome('Answer "yes" if given number is prime. Otherwise answer "no".'))
+game(welcome('Answer "yes" if given number is prime. Otherwise answer "no".'));

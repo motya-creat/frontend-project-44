@@ -11,16 +11,16 @@ export default function welcome(description) {
 }
 export const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
 export const isPrime = (num) => {
-  for (let i = 2, s = Math.sqrt(num); i <= s; i+=1) {
+  for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
     if (num % i === 0) return false;
   }
   return num > 1;
-}
+};
 
 export const getRandomNumber = (min = 1, max = 100) => {
-  const range = max - min + 1
-  return Math.floor(Math.random() * range) + min
-}
+  const range = max - min + 1;
+  return Math.floor(Math.random() * range) + min;
+};
 export const getAnswerQestion = {
   '+': function (x, y) { return x + y; },
   '-': function (x, y) { return x - y; },
@@ -28,22 +28,19 @@ export const getAnswerQestion = {
 };
 
 export function progression() {
+  const arr = [];
 
-  let arr = []
+  const start = getRandomNumber(1, 10);
+  const length = getRandomNumber(5, 10);
+  const step = getRandomNumber(1, 20);
 
-  const start = getRandomNumber(1, 10)
-  const length = getRandomNumber(5, 10)
-  const step = getRandomNumber(1, 20)
-
-  for (let i = 0; i < length; i+=1) {
-    arr.push(start + step * i)
+  for (let i = 0; i < length; i += 1) {
+    arr.push(start + step * i);
   }
 
-  const randIndex = getRandomNumber(0, arr.length - 1)
-  const correctNumber = arr[randIndex]
-  arr[randIndex] = '..'
+  const randIndex = getRandomNumber(0, arr.length - 1);
+  const correctNumber = arr[randIndex];
+  arr[randIndex] = '..';
 
-  return { arr, correctNumber }
+  return { arr, correctNumber };
 }
-
-
