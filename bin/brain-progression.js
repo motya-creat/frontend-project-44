@@ -22,8 +22,8 @@ export default function progressionGame(name) {
             console.log(`Let's try again, ${name}!`)
             return;
         }
-        console.log(`Congratulations, ${name}!`);
     }
+    console.log(`Congratulations, ${name}!`);
 }
 
 progressionGame(welcome('What number is missing in the progression?'))
