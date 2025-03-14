@@ -11,11 +11,11 @@ export default function progressionGame(name) {
         const { arr, correctNumber } = progression()
 
         console.log(`Question: ${arr.join(' ')}`);
-
+        
         const userAnswer = readlineSync.question(`Your answer: `)
 
         if (`${userAnswer}` === `${correctNumber}`) {
-            attemps += 1;
+            attemp += 1;
             console.log('Correct!');
         } else {
             console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctNumber}'.\nLet's try again, ${name}!`);
