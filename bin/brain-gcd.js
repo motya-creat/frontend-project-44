@@ -1,10 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import welcome from '../src/cli.js';
-
-function getRandomNumber(min = 1, max = 100) {
-  return Math.floor(Math.random() * (max - min) + min);
-}
+import welcome, { getRandomNumber } from '../src/cli.js';
 
 const gcdCheck = (a, b) => (b === 0 ? a : gcdCheck(b, a % b));
 
