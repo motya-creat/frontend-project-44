@@ -5,7 +5,7 @@ import welcome, { isPrime, getRandomNumber } from '../src/cli.js';
 export default function game(name) {
   let i = 0;
   while (i < 3) {
-    const randNumber = getRandomNumber(1, 10)
+    const randNumber = getRandomNumber(1, 10);
     console.log(`Question: ${randNumber}`);
     const answer = readlineSync.question('Your answer: ');
     const correct = isPrime(randNumber) ? 'yes' : 'no';
